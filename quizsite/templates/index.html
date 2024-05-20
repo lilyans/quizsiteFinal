@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Викторина</title>
+    {% load static %}
+    <link type="text/css" href="{% static 'css/index.css' %}" rel="stylesheet" />
+    <link rel="shortcut icon" href="{% static 'images/icon.ico' %}" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_img">
+                <img class="header_image" src="{% static 'images/landing_page.png' %}">
+            </div>
+        </header>
+        <div class="quizes">
+            <div class="quiz_box">
+                <div class="quiz_img">
+                    <img class="quiz_image" src="static/images/math_icon.png">
+                </div>
+                <a href="{% url 'quiz' subject='math' %}">
+                    <button type="button" class="btn">Математика</button>
+                </a>
+            </div>
+            <div class="quiz_box" id="unique-item">
+                <div class="quiz_img">
+                    <img class="quiz_image" src="static/images/biology_icon.png">
+                </div>
+                <a href="{% url 'quiz' subject='biology' %}">
+                    <button class="btn">Биология</button>
+                </a>
+            </div>
+            <div class="quiz_box">
+                <div class="quiz_img">
+                    <img class="quiz_image" src="static/images/chemistry_icon.png">
+                </div>
+                <a href="{% url 'quiz' subject='chemistry' %}">
+                    <button class="btn">Химия</button>
+                </a>
+            </div>
+            <div class="quiz_box">
+                <div class="quiz_img">
+                    <img class="quiz_image" src="static/images/physics_icon.png">
+                </div>
+                <a href="{% url 'quiz' subject='physics' %}">
+                    <button class="btn">Физика</button>
+                </a>
+            </div>
+            <div class="quiz_box" id="unique-item2">
+                <div class="quiz_img">
+                    <img class="quiz_image" src="static/images/history_icon.png">
+                </div>
+                <a href="{% url 'quiz' subject='history' %}">
+                    <button class="btn">История</button>
+                </a>
+            </div>
+            <div class="quiz_box" id="unique-item3">
+                <div class="quiz_img">
+                    <img class="quiz_image" src="static/images/geography_icon.png">
+                </div>
+                <a href="{% url 'quiz' subject='geography' %}">
+                    <button class="btn">География</button>
+                </a>
+            </div>
+        </div>
+        <div class="form">
+            <a href="{% url 'contact_form' %}">
+                <button class="form_btn">Задать вопрос</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма обратной связи</title>
+    {% load static %}
+    <link type="text/css" href="{% static 'css/contact_form.css' %}" rel="stylesheet" />
+    <link rel="shortcut icon" href="{% static 'images/icon.ico' %}" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_img">
+                <img class="header_image" src="{% static 'images/landing_page.png' %}">
+            </div>
+        </header>
+        <form method="post">
+            {% csrf_token %}
+            <div class="field1">
+                {% for field in form %}
+                <div class="field2">
+                    {{field.label}}
+                    <div class="field3">{{field}}</div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="button_sbm">
+                <input type="submit" class="button">
+            </div>
+        </form>
+        <a href="{% url 'index' %}">
+            <button type="button" class="btn">Назад</button>
+        </a>
+    </div>
+</body>
+</html>
+
+

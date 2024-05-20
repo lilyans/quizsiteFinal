@@ -1,0 +1,110 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    color: #151517;
+    font-size: 32px;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    background-color: #CFAF7F;
+    background-image: url('/static/images/pattern.png');
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 120px;
+    margin-right: 120px;
+    gap: 100px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quizes {
+    width: 1142px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.quiz_box {
+    width: 359px;
+    high: 240px;
+    background-color: #E56E8E;
+    border-radius: 20px;
+}
+
+#unique-item,  #unique-item2,  #unique-item3{
+  background-color: #8C463C;
+}
+
+.quiz_img {
+    display: flex;
+    justify-content: flex-end;
+    margin: 16px 16px 0 0;
+}
+
+.quiz_box a {
+      text-decoration: none;
+}
+
+.quiz_box .btn {
+    background-color: #FFE3E3;
+    border-radius: 16px;
+    padding: 6px 16px;
+    margin: 0 0 16px 16px;
+    font-weight: 540;
+    transition: background-color 0.3s ease;
+    border: 3px #8C463C solid;
+    cursor: pointer;
+    text-align: center;
+}
+
+#unique-item .btn, #unique-item2 .btn, #unique-item3 .btn {
+    border: 3px #E56E8E solid;
+}
+
+.quiz_box .btn:hover {
+      border: 3px #E56E8E solid;
+}
+
+#unique-item .btn:hover, #unique-item2 .btn:hover, #unique-item3 .btn:hover {
+    border: 3px #8C463C solid;
+}
+
+
+.form a {
+    text-decoration: none;
+}
+
+.form .form_btn {
+    background-color: #FFE3E3;
+    border-radius: 16px;
+    padding: 10px 24px;
+    font-size: 40px;
+    font-weight: 540;
+    transition: background-color 0.3s ease;
+    border: 3px #8C463C solid;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.form .form_btn:hover {
+    border: 3px #E56E8E solid;
+}

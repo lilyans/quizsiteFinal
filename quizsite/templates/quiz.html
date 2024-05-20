@@ -1,0 +1,17 @@
+<!-- quiz.html -->
+{% extends "base.html" %}
+{% load static %}
+
+{% block pagetitle %}
+Викторина по {{ subject }}
+{% endblock %}
+
+{% block content %}
+<form method="post" class="form_quiz">
+    {% csrf_token %}
+    <div class="quiz_question">
+        {{ form.as_p }}
+        <button type="submit" class="quiz_button">Отправить</button>
+    </div>
+</form>
+{% endblock %}

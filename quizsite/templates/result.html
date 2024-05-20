@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block pagetitle %}
+Результат
+{% endblock %}
+
+{% block content %}
+<h1>Ваш результат по {{ subject|title }}</h1>
+<p>Вы ответили правильно на {{ score }} из {{ total }} вопросов.</p>
+<a href="{% url 'quiz' subject=subject %}" class="one_more">
+    <button class="one_more_btn">Пройти еще раз</button>
+</a>
+{% endblock %}
+
+
